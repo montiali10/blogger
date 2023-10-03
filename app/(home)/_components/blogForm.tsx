@@ -4,6 +4,7 @@ import * as z from "zod"
 import Axios from "axios"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import { useRouter } from "next/navigation"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -41,6 +42,8 @@ const BlogForm = () => {
         },
     })
 
+    const router = useRouter();
+
     async function onSubmit(values: z.infer<typeof formSchema>) {
         setIsLoading(true);
         try {
@@ -56,15 +59,13 @@ const BlogForm = () => {
                 .catch(function (error) {
                     throw new Error(error);
                 });
+            form.reset();
+            router.push('blog');
         } catch (error) {
             console.log(error);
         } finally {
             setIsLoading(false);
-            form.reset();
         }
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        // console.log(values)
     }
 
     const [isLoading, setIsLoading] = useState(false);

@@ -10,7 +10,7 @@ const HomeLayout = (
     return ( 
         <div>
             <Navbar />
-            <div className="w-full px-10 pt-14">
+            <div className="w-full h-screen px-10 pt-14">
                 {children}
             </div>         
         </div>
