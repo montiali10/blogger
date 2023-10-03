@@ -1,9 +1,10 @@
-## Install all of the dependecies.
+## 1. Install all of the dependecies.
 ``` 
     npm install
 ```
-first run the server.
-## run the app
+
+## 2. run the app
+first run the server. then:
 ```
     npm run dev
 ```

@@ -29,8 +29,8 @@ const BlogCard = (blog: Blog) => {
                 <CardTitle>{blog.blog.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <h6>Blog summary:</h6>
-                    <p>{blog.blog.summary}</p>
+                    <h6 className="text-slate-400">blog summary:</h6>
+                    <p className="h-[100px] overflow-hidden">{blog.blog.summary}</p>
                 </CardContent>
             </Card>
         </Link>
